@@ -1,0 +1,123 @@
+/* /////////////////////////////
+////////////////////////////////
+
+///////   team style   ///////
+
+////////////////////////////////
+/////////////////////////////// */
+
+.teamBox {
+  @apply w-3/12 p-6 mt-4 bg-white shadow-sm rounded-2xl flex flex-col gap-5;
+}
+
+.titleBox {
+  @apply w-full flex flex-row justify-between items-center;
+}
+
+.titleBox > p {
+  @apply font-bold text-lg text-slate-700;
+}
+
+.count {
+  @apply flex flex-row items-center justify-center gap-2 text-xs text-sky-700 font-medium py-1 px-3 bg-sky-100 rounded-full;
+}
+
+.contactContainer {
+  @apply w-full flex flex-col flex-nowrap gap-3;
+}
+
+.contact {
+  @apply w-full flex flex-row flex-nowrap items-center justify-between;
+}
+
+.contact > div {
+  @apply flex flex-row items-center gap-4;
+}
+
+.contact img {
+  @apply w-10 ring-2 ring-offset-2 ring-sky-50 rounded-full;
+}
+
+.contact > div > div {
+  @apply flex flex-col items-start text-sm;
+}
+
+.contact h1 {
+  @apply font-bold capitalize;
+}
+
+.contact h2 {
+  @apply font-normal text-xs text-slate-400 capitalize;
+}
+
+.envelope {
+  @apply w-9 h-9 bg-slate-100 flex justify-center items-center rounded-full hover:cursor-pointer hover:bg-sky-300;
+}
+
+.newMember {
+  @apply w-full flex flex-row flex-nowrap items-center justify-start gap-3;
+}
+
+.newMember > div {
+  @apply w-10 h-10 bg-sky-300 flex justify-center items-center rounded-full ease-in-out duration-700 hover:cursor-pointer hover:rotate-180;
+}
+
+.task {
+  @apply w-full rounded-md bg-slate-100 flex flex-row items-center py-2 px-4 gap-4;
+}
+
+.task > i {
+  @apply cursor-pointer;
+}
+
+.task > i:nth-child(3) {
+  @apply cursor-pointer text-slate-400;
+}
+
+.task > p {
+  @apply grow font-medium text-sm;
+}
+
+.attendees {
+  @apply w-full flex flex-row items-end justify-between;
+}
+
+.boxAvator {
+  @apply w-1/2 flex flex-col items-start gap-3;
+}
+
+.boxAvator p {
+  @apply w-full text-sm font-semibold text-slate-700;
+}
+
+.avatorGrid {
+  @apply grid grid-cols-[repeat(6,1rem)];
+}
+
+.avator {
+  @apply max-w-none w-7 h-7 duration-1000 ring-1 ring-white rounded-full;
+}
+
+.avator:hover {
+  @apply scale-150;
+}
+
+.avator:hover ~ .avator {
+  @apply translate-x-5;
+}
+
+.sendInvite {
+  @apply w-1/2 flex flex-row flex-nowrap items-center justify-end gap-2;
+}
+
+.sendInvite > p {
+  @apply text-xs font-extrabold text-slate-600;
+}
+
+.sendInvite > div {
+  @apply w-7 h-7 bg-sky-300 flex justify-center items-center rounded-full cursor-pointer;
+}
+
+.sendInvite > div > i {
+  @apply text-xs;
+}

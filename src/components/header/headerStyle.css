@@ -1,0 +1,74 @@
+/* /////////////////////////////
+////////////////////////////////
+
+///////   header style   ///////
+
+////////////////////////////////
+/////////////////////////////// */
+
+.header {
+  @apply w-full h-20 relative py-4 px-6 rounded-2xl shadow-sm bg-white flex flex-row justify-between items-center gap-3;
+}
+
+.headerBoxleft,
+.headerBoxRight {
+  @apply w-1/2 h-full flex items-center gap-4;
+}
+
+.headerBoxleft {
+  @apply justify-start;
+}
+
+.headerBoxRight {
+  @apply justify-end;
+}
+
+.imgCoverProfile {
+  @apply h-12 relative;
+}
+
+.imgCoverProfile > img {
+  @apply h-full;
+}
+
+.nameText {
+  @apply flex flex-col flex-nowrap items-start;
+}
+
+.nameText > h1 {
+  @apply font-bold text-base text-slate-500 capitalize;
+}
+
+.nameText > h2 {
+  @apply font-normal text-sm text-slate-500 capitalize;
+}
+
+.todayCalenderHeader {
+  @apply bg-slate-100 py-3 px-5 rounded-full text-sm flex gap-2 font-medium;
+}
+
+.fa-calendar-check {
+  @apply text-base text-slate-600 ;
+}
+
+.search {
+  @apply w-2/4 bg-slate-100 rounded-full text-sky-700 text-sm flex;
+}
+
+.search > input {
+  @apply font-bold;
+}
+
+.search > input::placeholder {
+  @apply font-bold text-slate-400;
+}
+
+.notif {
+  @apply relative  bg-slate-100 rounded-full text-sky-700 text-sm font-bold flex gap-3 cursor-pointer;
+}
+
+.fa-search,
+.fa-bell,
+.fa-comment-dots {
+  @apply text-base text-slate-600 py-3 px-4;
+}

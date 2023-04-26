@@ -1,0 +1,30 @@
+/* //////////////////////////////
+////////////////////////////////
+
+///////    card style    ///////
+
+////////////////////////////////
+/////////////////////////////// */
+/* 
+.card {
+  @apply relative bg-slate-50 dark:bg-zinc-800 w-fit py-5 px-8 
+  my-6 mx-6 flex flex-row flex-nowrap justify-center items-center gap-6 
+  rounded-xl shadow-2xl shadow-yellow-800/30 dark:shadow-zinc-600/30 cursor-pointer transition ease-in-out duration-700 hover:scale-105;
+}
+
+.imgCover {
+  @apply w-16 ring-2 ring-slate-200 ring-offset-2 rounded-full;
+}
+
+.cardText {
+  @apply flex flex-col 
+  flex-nowrap items-start;
+}
+
+.cardText > p:nth-child(1) {
+  @apply text-sm font-extrabold dark:text-zinc-300;
+}
+
+.cardText > p:nth-child(2) {
+  @apply text-sm dark:text-zinc-500;
+} */

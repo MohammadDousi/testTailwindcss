@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import Card from "./components/card/Card";
+import Header from "./components/header/Header";
+import Team from "./components/team/Team";
+import "./assets/font/all.css";
+import "./index.css";
+
+export default function App() {
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "light");
+  } else {
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme", "dark");
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Team />
+    </>
   );
 }
-
-export default App;
