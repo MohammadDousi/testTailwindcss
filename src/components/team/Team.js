@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+
+import UploadPic from "../uploadPic/UploadPic";
 
 import profile1 from "../../assets/image/profile1.png";
 import profile2 from "../../assets/image/profile2.png";
@@ -7,6 +9,16 @@ import profile5 from "../../assets/image/profile5.png";
 import profile8 from "../../assets/image/profile8.png";
 
 export default function Team() {
+  const [showUpload, setShowUpload] = useState(false);
+
+  const uploadHandler = () => {
+    setShowUpload(true);
+  };
+
+  const closeBoxUpload = (data) => {
+    setShowUpload(false)
+  };
+
   return (
     <>
       <div className="teamBox">
@@ -60,13 +72,12 @@ export default function Team() {
         <span className="w-full h-1 rounded-full bg-slate-50"></span>
 
         <div className="newMember">
-          <div>
+          <div onClick={uploadHandler}>
             <i className="fa fa-plus"></i>
           </div>
           <p>Invite new team member</p>
         </div>
       </div>
-
       <div className="teamBox">
         <div className="titleBox">
           <p>Project onboarding</p>
@@ -87,7 +98,6 @@ export default function Team() {
         </div>
 
         <div className="attendees">
-         
           <div className="boxAvator">
             <p>Attendees</p>
             <div className="avatorGrid">
@@ -96,19 +106,22 @@ export default function Team() {
               <img className="avator" src={profile4} alt={profile4} />
               <img className="avator" src={profile8} alt={profile8} />
               <img className="avator" src={profile5} alt={profile5} />
-              <div className="avator bg-sky-200 flex justify-center items-center text-sm font-medium">+2</div>
+              <div className="avator bg-sky-200 flex justify-center items-center text-sm font-medium">
+                +2
+              </div>
             </div>
           </div>
-         
-          <div className="sendInvite"> 
+
+          <div className="sendInvite">
             <p>Send Invitation link</p>
             <div>
               <i className="far fa-paper-plane"></i>
             </div>
           </div>
-          
         </div>
       </div>
+
+      {showUpload && <UploadPic close={closeBoxUpload} />}
     </>
   );
 }

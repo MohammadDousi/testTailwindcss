@@ -52,7 +52,7 @@
 }
 
 .search {
-  @apply w-2/4 bg-slate-100 rounded-full text-sky-700 text-sm flex;
+  @apply w-3/4 bg-slate-100 rounded-full text-sky-700 text-sm flex;
 }
 
 .search > input {

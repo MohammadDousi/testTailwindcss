@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import Team from "./components/team/Team";
 import "./assets/font/all.css";
 import "./index.css";
+import Sidebar from "./components/sidebar/Sidebar";
 
 export default function App() {
   if (localStorage.getItem("theme") === "dark") {
@@ -16,9 +17,12 @@ export default function App() {
   }
 
   return (
-    <>
-      <Header />
-      <Team />
-    </>
+    <section className="containerMain">
+      <Sidebar />
+      <section className="boxRight">
+        <Header />
+        <Team />
+      </section>
+    </section>
   );
 }
